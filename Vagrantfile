@@ -4,8 +4,5 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "playbook/dropwizard-servers-installation.yml"
-    ansible.host_vars = {
-      "dropwizard-servers" => {"http_port" => 2228,}
-    }
   end
 end
